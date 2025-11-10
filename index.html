@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>我们的家 · 家庭时光</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <span class="brand__logo" aria-hidden="true">🏡</span>
+        <span class="brand__name">我们的家</span>
+      </div>
+      <nav class="site-nav" aria-label="主要导航">
+        <a href="#about">关于我们</a>
+        <a href="#timeline">家庭时间线</a>
+        <a href="#members">家庭成员</a>
+        <a href="#gallery">影像集</a>
+        <a href="#tasks">家务清单</a>
+        <a href="#recipes">家庭食谱</a>
+        <a href="#contact">联系与愿望</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero__inner">
+        <div class="hero__text">
+          <h1 id="hero-title">记录我们的小确幸</h1>
+          <p>从每日的问候、温馨的饭菜到远方的旅行，这里收藏着属于我们的点滴时光。</p>
+          <ul class="hero__highlights">
+            <li>
+              <span class="hero__icon" aria-hidden="true">🗓️</span>
+              <span>同步更新家庭日程，重要纪念不错过</span>
+            </li>
+            <li>
+              <span class="hero__icon" aria-hidden="true">📷</span>
+              <span>精选照片、视频回放，让回忆常新</span>
+            </li>
+            <li>
+              <span class="hero__icon" aria-hidden="true">📝</span>
+              <span>家务、菜谱、愿望清单，一目了然</span>
+            </li>
+          </ul>
+          <a class="btn" href="#timeline">查看本周家庭计划</a>
+        </div>
+        <div class="hero__card" role="presentation">
+          <div class="hero__card-inner">
+            <h2>本周亮点</h2>
+            <ul id="weeklyHighlights" class="highlight-list" aria-label="本周家庭亮点"></ul>
+          </div>
+        </div>
+      </div>
+      <div class="hero__wave" aria-hidden="true"></div>
+    </section>
+
+    <section id="about" class="section section--light" aria-labelledby="about-title">
+      <div class="container">
+        <h2 id="about-title">关于我们</h2>
+        <p class="section__intro">
+          我们是一个四口之家：爸妈热爱烹饪与旅行，哥哥正在探索科技新知，妹妹专注绘画与自然观察。
+          希望这个小站既是记录，也是彼此支持与鼓励的空间。
+        </p>
+        <dl class="about-grid">
+          <div>
+            <dt>家庭口号</dt>
+            <dd>彼此倾听，热爱生活，保持好奇。</dd>
+          </div>
+          <div>
+            <dt>年度目标</dt>
+            <dd>完成三次家庭旅行，发起十二次家庭共读之夜。</dd>
+          </div>
+          <div>
+            <dt>本月关键词</dt>
+            <dd>春游、种植、健康餐食。</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <section id="timeline" class="section" aria-labelledby="timeline-title">
+      <div class="container">
+        <div class="section__head">
+          <h2 id="timeline-title">家庭时间线</h2>
+          <p class="section__intro">按照时间顺序记录近期的家庭事件，可随时补充备注与照片。</p>
+        </div>
+        <ol class="timeline" id="timelineList" aria-label="家庭事件时间线"></ol>
+      </div>
+    </section>
+
+    <section id="members" class="section section--light" aria-labelledby="members-title">
+      <div class="container">
+        <div class="section__head">
+          <h2 id="members-title">家庭成员</h2>
+          <p class="section__intro">了解每位成员的兴趣、当前关注事项以及他们最近的闪光瞬间。</p>
+        </div>
+        <div class="member-grid" id="memberCards" role="list"></div>
+      </div>
+    </section>
+
+    <section id="gallery" class="section" aria-labelledby="gallery-title">
+      <div class="container">
+        <div class="section__head">
+          <h2 id="gallery-title">影像集</h2>
+          <p class="section__intro">按主题收集的家庭照片，点击可查看描述与日期。</p>
+        </div>
+        <div class="gallery-grid" id="galleryGrid"></div>
+      </div>
+    </section>
+
+    <section id="tasks" class="section section--light" aria-labelledby="tasks-title">
+      <div class="container">
+        <div class="section__head">
+          <h2 id="tasks-title">家务与待办</h2>
+          <p class="section__intro">按类别查看当前任务与负责人，完成后可在共享表格中勾选。</p>
+        </div>
+        <div class="tasks-board" id="tasksBoard"></div>
+      </div>
+    </section>
+
+    <section id="recipes" class="section" aria-labelledby="recipes-title">
+      <div class="container">
+        <div class="section__head">
+          <h2 id="recipes-title">家庭食谱精选</h2>
+          <p class="section__intro">记录我们最爱的菜谱与小贴士，一起尝试新的味道。</p>
+        </div>
+        <div class="recipe-grid" id="recipeGrid"></div>
+      </div>
+    </section>
+
+    <section id="contact" class="section section--accent" aria-labelledby="contact-title">
+      <div class="container contact-section">
+        <div>
+          <h2 id="contact-title">留言与愿望</h2>
+          <p>想分享的心情、想实现的愿望，都可以记录在这里。我们会定期整理到共享文档，一起跟进进度。</p>
+          <a class="btn btn--light" href="https://docs.google.com" target="_blank" rel="noopener">前往家庭留言板</a>
+        </div>
+        <form class="contact-form" aria-label="记录愿望的表单">
+          <div class="form-group">
+            <label for="wishName">姓名</label>
+            <input id="wishName" name="name" type="text" placeholder="例如：妈妈" required />
+          </div>
+          <div class="form-group">
+            <label for="wishCategory">愿望类别</label>
+            <select id="wishCategory" name="category">
+              <option value="旅行">旅行</option>
+              <option value="学习">学习</option>
+              <option value="健康">健康</option>
+              <option value="家务">家务</option>
+              <option value="其他">其他</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="wishContent">愿望内容</label>
+            <textarea id="wishContent" name="content" rows="4" placeholder="写下你想做的事情或想分享的心情"></textarea>
+          </div>
+          <button type="submit" class="btn">暂存愿望</button>
+          <p class="form-hint">表单目前为示例，提交后会在页面顶部提示。</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="copyrightYear"></span> 我们的家 · 用爱记录生活</p>
+    </div>
+  </footer>
+
+  <div class="toast" role="status" aria-live="polite" hidden>
+    <span class="toast__icon" aria-hidden="true">✨</span>
+    <span class="toast__text">愿望已暂存，记得同步到家庭文档哦！</span>
+  </div>
+
+  <script src="assets/main.js" defer></script>
+</body>
+</html>
