@@ -1,0 +1,5 @@
+node_modules/
+server/family.db
+server/*.sqlite
+.DS_Store
+npm-debug.log*

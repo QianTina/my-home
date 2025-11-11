@@ -1,0 +1,25 @@
+{
+  "name": "my-home",
+  "version": "1.1.0",
+  "description": "家庭主页，提供 SQLite 数据库驱动的内容展示",
+  "main": "server/index.js",
+  "scripts": {
+    "start": "node server/index.js",
+    "dev": "nodemon server/index.js"
+  },
+  "keywords": [
+    "family",
+    "homepage",
+    "express",
+    "sqlite"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.19.2",
+    "sqlite3": "^5.1.7"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.3"
+  }
+}
